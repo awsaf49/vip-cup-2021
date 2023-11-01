@@ -35,6 +35,35 @@ People spend a significant portion of their lives in bed. Modern AI-driven pose 
 
 The 2021 VIP Cup targets a domain adaptation problem for regression focusing on in-bed pose estimation, an area previously unexplored. The goal is to find vision-based solutions for pose estimation under covers without annotations for covered scenarios but ample labeled data for uncovered ones.
 
+## Dataset Description
+
+The Simultaneously-collected multimodal Lying Pose (SLP) dataset features in-bed human poses from 109 participants in both home and hospital settings. Captured in four imaging modalities under varying cover conditions, this challenge focuses on using the LWIR modality to predict poses without labeled covered training data. The dataset can be downloaded on [Kaggle](https://www.kaggle.com/datasets/awsaf49/ieee-vip-cup-2021-train-val-dataset)
+
+### Train + Validation Datasets (80 subjects)
+
+- **Training Set (80 subjects):**
+  - Annotated uncovered data from 30 subjects.
+  - Unannotated thin-covered data from 25 subjects.
+  - Unannotated thick-covered data from 25 subjects.
+  
+- **Validation Set (10 subjects):**
+  - Unannotated thin-covered data from 5 subjects.
+  - Unannotated thick-covered data from 5 subjects.
+
+Both LWIR and RGB data, along with an alignment mapping between them, will be provided for these sets.
+
+### Test Dataset (19 subjects: 12 from home, 7 from hospital)
+
+- **Home Setting:**
+  - 6 with thin cover.
+  - 6 with thick cover.
+
+- **Hospital Setting:**
+  - 3 with thin cover.
+  - 4 with thick cover.
+
+Only the LWIR modality is provided for the test set, simulating real-world overnight monitoring scenarios where RGB might be unavailable. This test dataset is further split into Test Set 1 and Test Set 2. As LWIR is centered on human figures, no bounding boxes are provided.
+
 ## How to Run
 
 For successful execution, follow these guidelines:
