@@ -1,0 +1,6 @@
+tensorflow==2.4.1
+opencv-python
+yacs
+pycocotools
+tqdm
+kaggle
